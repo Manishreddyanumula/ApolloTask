@@ -1,0 +1,33 @@
+
+
+<div class="container">
+    <div class="appointment">
+        <div class="doc-details">
+            <h1><span>Slot Booked At :</span>{{slotTime}}</h1>
+    <div class="row">
+        <div class="col-sm-6">
+            <p class="name-text"><span class="doc-span">Doctor Name : </span>{{docDetails.name}}</p>
+            <p class="spec-text"><span class="doc-span">Specification : </span>{{docDetails.spec}}</p>
+            <p class="exp-text"><span class="doc-span">Experience : </span>{{docDetails.exp}}</p>
+            <p class="add-text"><span class="doc-span">Address : </span>{{docDetails.address}}</p>
+            <p class="fee-text"> <span class="doc-span">Doctor Fee : </span>{{docDetails.fee}}</p>
+        </div>
+        <div class="col-sm-6">
+            <div class="signupDetails">
+                <p><span class="patient-span">Patient First Name : </span>{{userDetails.firstName}}</p> 
+                <p> <span class="patient-span">Patient Last Name : </span>{{userDetails.lastName}}</p> 
+                <p> <span class="patient-span">Phone Number  : </span>{{userDetails.phone}}</p> 
+                <p><span class="patient-span">Email ID : </span>{{userDetails.email}}</p>  
+            </div>
+        </div>
+    </div>
+           
+        </div>
+       
+    
+        <div>
+            <button (click)="toLogin()" class="btn btn-success" type="button">login ?</button>
+        </div>
+    
+    </div>
+</div>

@@ -1,0 +1,32 @@
+
+<div class="container">
+   
+    <div class="landing-page">
+        <div class="card" *ngFor="let doc of doctorsList">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card-header">
+                        <h2> {{doc.name}}</h2>
+                    </div>
+                    <hr>
+                    <div class="card-body">
+                        <p class="spec-txt"><span class="doc-span">Specification : </span>{{doc.spec}}</p>
+                        <p class="exp-text"><span class="doc-span">Experience : </span>{{doc.exp}}</p>
+                        <p class="add-text"><span class="doc-span">Address : </span>{{doc.address}}</p>
+                        <p class="fee-text"><span class="doc-span">Doctror Fee : </span>{{doc.fee}}</p>
+                       
+                    </div>
+                    <div class="card-footer">
+                        <button type="button" class="btn book-btn btn-primary" (click)="bookNow(doc)">Book your appointment</button>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <img [src]="doc.imgURL" alt="">
+                </div>
+            </div>
+          
+          </div>
+    </div>
+</div>
+
+

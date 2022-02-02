@@ -1,0 +1,31 @@
+
+<div class="container">
+    <div class="appointment">
+        <div class="doctor-details">
+            <img [src]="docDetails.imgURL" alt={{docDetails.name}}>
+            <hr>
+            <div class="header"><span class="doc-span">Doctor Name : </span>{{docDetails.name}}</div>
+            <hr>
+            <div class="content">
+                <p class="spec-text"><span class="doc-span">Specification : </span> {{docDetails.spec}}</p>
+                <p class="exp-text"><span class="doc-span">Experience : </span>{{docDetails.exp}}</p>
+                <p class="add-text"><span class="doc-span">Address : </span>{{docDetails.address}}</p>
+                <p class="fee-text"> <span class="doc-span">Doctor Fee : </span>{{docDetails.fee}}</p>
+            </div>
+            <div>
+                <label for="cars">Select your slot time</label>
+        
+                <select name="cars" id="cars" [(ngModel)]="selectedTime">
+                    <option value="'10:00 am - 11:00 am'">10:00 am - 11:00 am</option>
+                    <option value="'12:00 am - 1:00 pm'">12:00 am - 1:00 pm</option>
+                    <option value="'2:00 pm - 3:00 pm'">2:00 pm - 3:00 pm</option>
+                    <option value="'4:00 pm - 5:00 pm'">4:00 pm - 5:00 pm</option>
+                </select>
+            </div>
+            <div>
+                <button type="button" class="btn btn-primary" (click)="onSave()" [disabled]="selectedTime.value === ''">save</button>
+            </div>
+        </div>
+    
+    </div>
+</div>

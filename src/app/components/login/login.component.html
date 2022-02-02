@@ -1,0 +1,13 @@
+<div class="login">
+    <form class="modal-content" [formGroup]="loginForm"> 
+        <div class="container">
+          <label for="uname"><b>Email :</b></label>
+          <input type="text" placeholder="Enter Username" formControlName="email" name="uname">
+    
+          <label for="psw"><b>Password :</b></label>
+          <input type="password" placeholder="Enter Password" formControlName="password" name="psw">
+            
+          <button type="button" class="btn btn-primary" [disabled]="!loginForm.valid" (click)="login()" >Login</button> 
+        </div> 
+      </form>
+</div>
